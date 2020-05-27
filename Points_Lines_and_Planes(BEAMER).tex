@@ -284,8 +284,79 @@ A \textbf{postulate} (a.k.a. an \textbf{axiom}) is an accepted statement of fact
 \end{frame}
 
 \begin{frame}{Example 3}
+Each surface of the box represents a plane. What is the intersection of plane $ADC$ and plane $BFG$?
+\newline\\
+\begin{center}
+\begin{tikzpicture}
+\tkzDefPoints{0/0/E, 2/0/F, 2/2/B, 0/2/A}
+\tkzDrawPolygon(E,F,B,A)
+\tkzDefShiftPoint[A](30:2){D}
+\tkzDefShiftPoint[B](30:2){C}
+\tkzDefShiftPoint[E](30:2){H}
+\tkzDefShiftPoint[F](30:2){G}
+\tkzDrawSegments(A,D B,C F,G D,C G,C)
+\tkzDrawSegments[dashed](E,H H,D H,G)
+\tkzLabelPoints[left](A,E)
+\tkzLabelPoints[above left](D,H)
+\tkzLabelPoints[right](G,C)
+\tkzLabelPoints[below right](B,F)
+\onslide<2->{\tkzFillPolygon[blue!40, opacity=0.6](A,D,C,B)}
+\onslide<3->{\tkzFillPolygon[green!40, opacity=0.3](B,C,G,F)}
+\onslide<4->{\tkzDrawSegment[ultra thick](B,C)}
+\end{tikzpicture}
+\end{center}
 
+\onslide<4->{$\overleftrightarrow{BC}$}
 \end{frame}
+
+\begin{frame}{Naming Planes}
+When naming planes with 4 or more points, list the points in order either clockwise or counterclockwise.
+\end{frame}
+
+\begin{frame}{Example 4}
+(a)	\quad What plane contains $N, \, P, \text{ and } Q?$
+\begin{center}
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/N, 4/0/P, 4/2/K, 0/2/J}
+	\tkzDrawPolygon(N,P,K,J)
+	\tkzDefShiftPoint[N](30:1.5){R}
+	\tkzDefShiftPoint[J](30:1.5){M}
+	\tkzDefShiftPoint[K](30:1.5){L}
+	\tkzDefShiftPoint[P](30:1.5){Q}
+	\tkzDrawSegments[dashed](N,R R,M R,Q)
+	\tkzDrawSegments(J,M M,L L,K L,Q Q,P)
+	\tkzLabelPoints[left](J,N)
+	\tkzLabelPoints[above](M,K,L)
+	\tkzLabelPoints[above right](R)
+	\tkzLabelPoints[right](P,Q)
+	\onslide<2->{\tkzFillPolygon[blue!40, opacity=0.4](N,P,Q,R)}
+\end{tikzpicture}
+\end{center}
+\onslide<3->{plane $NPR$}
+\end{frame}
+
+\begin{frame}{Example 4}
+(b)	\quad What plane contains $J$, $M$, and $Q$?
+\begin{center}
+\begin{tikzpicture}
+	\tkzDefPoints{0/0/N, 4/0/P, 4/2/K, 0/2/J}
+	\tkzDrawPolygon(N,P,K,J)
+	\tkzDefShiftPoint[N](30:1.5){R}
+	\tkzDefShiftPoint[J](30:1.5){M}
+	\tkzDefShiftPoint[K](30:1.5){L}
+	\tkzDefShiftPoint[P](30:1.5){Q}
+	\tkzDrawSegments[dashed](N,R R,M R,Q)
+	\tkzDrawSegments(J,M M,L L,K L,Q Q,P)
+	\tkzLabelPoints[left](J,N)
+	\tkzLabelPoints[above](M,K,L)
+	\tkzLabelPoints[above right](R)
+	\tkzLabelPoints[right](P,Q)
+	\onslide<2->{\tkzFillPolygon[blue!40, opacity=0.4](J,M,Q,P)}
+\end{tikzpicture}
+\end{center}
+\onslide<3->{plane $JMQ$}
+\end{frame}
+
 
 
 \end{document}
