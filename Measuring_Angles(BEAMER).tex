@@ -333,6 +333,7 @@ Find the measure of each angle.	\newline\\
 
 \begin{frame}{Example 4}
 (b)	\quad Given $\overleftrightarrow{KM}$	\newline\\
+\begin{minipage}{0.4\textwidth}
 \begin{tikzpicture}[scale=0.8]
     \tkzDefPoints{0/0/L, 1.75/0/M, -1.75/0/K}
     \tkzDefShiftPoint[L](55:1.75){N}
@@ -344,6 +345,52 @@ Find the measure of each angle.	\newline\\
     \node at (0,0) [anchor = south east] {$10x-5$};
     \node at (0.25,0) [anchor = south west] {$4x+3$};
 \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{align*}
+\onslide<2->{m\angle KLN + m\angle MLN &= m\angle KLM}	\\
+\onslide<3->{10x-5 + 4x+3 &= 180}	\\
+\onslide<4->{14x-2 &= 180}	\\
+\onslide<5->{14x &= 182}	\\
+\onslide<6->{x &= 13}
+\end{align*}
+\end{minipage}
+\begin{align*}
+\onslide<7->{m\angle KLN &= 10(13)-5 & m\angle MLN &= 4(13)+3}	\\
+\onslide<8->{m\angle KLN &= 125^\circ & m\angle MLN &= 55^\circ}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Example 4}
+(c)	\quad	\newline\\
+\begin{minipage}{0.4\textwidth}
+\begin{tikzpicture}
+    \tkzDefPoints{0/0/F, 2.25/0/G, 0/2.25/E}
+    \tkzDefShiftPoint[F](40:2.25){H}
+    \tkzDrawSegments[add = 0 and 0.25, ->, >=stealth](F,G F,H F,E)
+    \tkzDrawPoints(E,H,G)
+    \tkzLabelPoints[left](E,F)
+    \tkzLabelPoints[above left](H)
+    \tkzLabelPoints[below](G)
+    \tkzMarkRightAngle(G,F,E)
+    \tkzLabelAngle[pos=1.05](G,F,H){$x+1$}
+    \tkzLabelAngle[pos=1.5](H,F,E){$2x+2$}
+    \draw[->, >=stealth] (65:1.2) -- (65:0.35);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{align*}
+\onslide<2->{m\angle EFH + m\angle GFH &= 90}	\\
+\onslide<3->{2x+2 + x+1 &= 90}	\\
+\onslide<4->{3x+3 &= 90}	\\
+\onslide<5->{3x &= 87}		\\
+\onslide<6->{x &= 29}
+\end{align*}
+\end{minipage}
+\begin{align*}
+\onslide<7->{m\angle EFH &= 2(29)+2 & m\angle GFH &= 29+1}	\\
+\onslide<8->{m\angle EFH &= 60^\circ & m\angle GFH &= 30^\circ}
+\end{align*}
 \end{frame}
 
 \end{document}
